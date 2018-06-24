@@ -117,7 +117,7 @@ echo '</br>';echo '</br>';
 
 
 //ARRAY TO STRING
-        $randomString = 'hi there friend'; 
+        $randomString = 'Random String'; 
 
         $arrayToString = explode(' ', $randomString); 
 
@@ -137,10 +137,32 @@ echo '</br>';echo '</br>';
 
         echo '</br>';echo '</br>';
 
+//COMPARE STRINGS - Returns Integer ~ 0 => strings match
+                                    // Positive -> first is longer than second, number = number of differences
+                                    // Negative -> first is SHORTER than second, number = number of differences
+        $man = 'Man';
+        $manhole = 'Manhole'; 
+        echo strcmp($man, $manhole);
+        echo '</br>';echo '</br>';
+
+
+        echo strstr($randomString, 'nd'); //<--Print everything after (and including) second value
+        echo strpos($randomString, 'R'); //<--Ingeger location of string in another string
+        echo '</br>';echo '</br>';
+
+        //Replace - 1)Target, 2)Replace with, 3)String to be edited
+        $newString = str_replace('String', 'Stuff', $randomString); 
+        echo $newString;
         
+        echo '</br>';echo '</br>';
 
+//FUNCTIONS
 
+        function addNumbers($x, $y){
+            return $x + $y; 
+        }
 
+        echo addNumbers(1, 2); 
 
 
 		?>
